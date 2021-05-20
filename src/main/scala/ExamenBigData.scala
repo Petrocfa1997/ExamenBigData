@@ -4,9 +4,7 @@ import scala.collection.immutable.ListMap
 object ExamenBigData {
 
   def retournerListe(a : List[String]) : List[String]= {
-    val lis: List[String] = a.filter(l=>l.endsWith("n"))
-
-    return lis
+    return a.filter(l=>l.endsWith("n"))
   }
 
   def liste_double():Unit = {
@@ -27,6 +25,8 @@ object ExamenBigData {
 
   }
   def main(args: Array[String]): Unit = {
-    retournerListe(List("julien","Paul","jean","rac","trec","joel","ed","chris","maurice"))
+    liste_double()
+    val res =retournerListe(List("julien","Paul","jean","rac","trec","joel","ed","chris","maurice"))
+    res.foreach(l=>println(l))
   }
 }
